@@ -15,7 +15,6 @@ const useCustomQuery= ({url,queryKey,config}:IAuthenticatedQuery) => {
     queryKey,
     queryFn: async () => {
       const response = await axiosInstance.get(url,config);
-      // من الأفضل إرجاع البيانات الكاملة ثم التعامل معها لاحقًا
       return response.data;
     }
   });

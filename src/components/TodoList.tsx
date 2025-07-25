@@ -29,29 +29,8 @@ const TodoList = () => {
   const storageKey = "loggedInUser";
   const userDataString = localStorage.getItem(storageKey);
   const userData = userDataString ? JSON.parse(userDataString) : null;
-   // useEffect(() => {
-  //   try {
-  //     axiosInstance.get("/users/me?populate=todos",{
-  //       headers:{
-  //         Authorization:`Bearer ${userData.jwt}`
-  //       }
-  //     })
-  //     .then(res =>    {
-  //       setTodos(res.data.todos)
-  //       console.log(res)
-  //       if(res.status == 200){
-  //         setIsLoading(true)
-  //       }
-  //     })
-  //     .catch(error => console.error("The Error",error))
-  //   } catch (error) {
-  //     console.log(error)
-  //   }finally{
-  //     setIsLoading(false)
-  //   }
-  // },[userData.jwt])
   const { isLoading, data, } = useCustomQuery({
-    queryKey:["todoList",`${qweryVersion}`] , //todos-id => عشان يعمل update تلقاىي  unique keys
+    queryKey:["todoList",`${qweryVersion}`] ,
     url:"/users/me?populate=todos",
     config:{
       headers: {
