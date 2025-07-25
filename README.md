@@ -1,27 +1,37 @@
-# React + TypeScript + Vite
+# React Basics Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a front-end project built with **React** and **Vite**, styled using **Tailwind CSS**, and using **React Hook Form**, **Yup**, and **TanStack React Query** for data management and form handling.
 
-Currently, two official plugins are available:
+## 💡 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 18 with Vite
+- Tailwind CSS for styling
+- React Router DOM for routing
+- React Hook Form + Yup for form validation
+- TanStack Query for data fetching and caching
+- Toast notifications with `react-hot-toast`
+- Axios for API requests
+- Local storage handling with `localforage`
+- Sorting and filtering with `match-sorter`
 
-## Expanding the ESLint configuration
+## 🧠 Backend
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+The backend is built using **Strapi**, a headless CMS that provides a fully customizable API.
 
-- Configure the top-level `parserOptions` property like this:
+### Backend Features:
+- Built with **Strapi v4**
+- JWT-based authentication
+- RESTful API for products, users, and more
+- Custom roles & permissions
+- Media upload support
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+You can find the backend project [here](http://localhost:1337) (or update with the actual deployed link if available).
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## 📦 Installation
+
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
